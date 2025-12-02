@@ -1,0 +1,371 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    padding: 20px 0;
+    border-bottom: 3px solid white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-section img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: rgba(74, 144, 226, 0.3);
+}
+
+/* DETAILS */
+.main-content {
+    padding: 40px 0;
+}
+
+.featured-article {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.article-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 20px;
+    color: white;
+}
+
+.image-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-location {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.article-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.article-date {
+    font-size: 2rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.article-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.add-favorite-btn {
+    padding: 12px 25px;
+    background-color: white;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-favorite-btn:hover {
+    background-color:rgba(74, 144, 226, 0.3);
+}
+
+/* Favorites */
+.favorites-section {
+    background: #0f3460;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.favorites-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.favorite-item {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.favorite-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.favorite-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.favorite-info {
+    flex: 1;
+}
+
+.favorite-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.favorite-date {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.favorite-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.remove-btn {
+    padding: 6px 12px;
+    background-color: white;
+    color: grey;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: rgba(74, 144, 226, 0.3);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        width: 150px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .favorite-thumbnail {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .favorite-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .featured-article {
+        padding: 20px;
+    }
+
+    .favorites-section {
+        padding: 20px;
+    }
+
+    .search-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: auto; 
+    background: rgba(0,0,0,0.85);
+}
+.modal-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+}
+.modal-caption {
+    color: #fff;
+    text-align: center;
+    margin: 12px auto 0;
+    font-size: 1.2rem;
+    max-width: 90vw;
+}
+.modal-close {
+    position: absolute;
+    top: 35px;
+    right: 60px;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+}
+@media (max-width:600px){
+    .modal-content { max-width:98vw; }
+    .modal-close { right: 20px; }
+}
